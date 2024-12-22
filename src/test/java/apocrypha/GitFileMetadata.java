@@ -9,28 +9,29 @@
  */
 package apocrypha;
 
-import java.io.File;
-
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.RevCommit;
 
+import psychopath.Directory;
+import psychopath.Locator;
+
 public class GitFileMetadata {
 
     public static void main(String[] args) throws Exception {
+        String remote = "https://github.com/teletha/blog-data.git";
+        Directory local = Locator.temporaryDirectory();
+        Git git = Git.cloneRepository().setURI(remote).setDirectory(local.asJavaFile()).call();
+        Repository repository = git.getRepository();
+
         // Gitリポジトリのルートディレクトリを指定
-        File repoDir = new File("");
-        String filePath = "src/test/resources/article/JavaでPowerAssert.md"; // リポジトリ内のファイルパス
+        String filePath = "article/JavaでPowerAssert.md"; // リポジトリ内のファイルパス
 
-        try (Repository repository = Git.open(repoDir).getRepository()) {
-            Git git = new Git(repository);
+        System.out.println("=== 最終コミット情報 ===");
+        printCommitInfo(git, repository, filePath, false);
 
-            System.out.println("=== 最終コミット情報 ===");
-            printCommitInfo(git, repository, filePath, false);
-
-            System.out.println("\n=== 初回コミット情報 ===");
-            printCommitInfo(git, repository, filePath, true);
-        }
+        System.out.println("\n=== 初回コミット情報 ===");
+        printCommitInfo(git, repository, filePath, true);
     }
 
     private static void printCommitInfo(Git git, Repository repository, String filePath, boolean isFirst) throws Exception {
