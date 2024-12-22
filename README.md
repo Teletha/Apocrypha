@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://docs.oracle.com/en/java/javase/23/"><img src="https://img.shields.io/badge/Java-Release%2023-green"/></a>
+    <a href="https://docs.oracle.com/en/java/javase/21/"><img src="https://img.shields.io/badge/Java-Release%2021-green"/></a>
     <span>&nbsp;</span>
     <a href="https://jitpack.io/#teletha/apocrypha"><img src="https://img.shields.io/jitpack/v/github/teletha/apocrypha?label=Repository&color=green"></a>
     <span>&nbsp;</span>
@@ -13,7 +13,7 @@
 
 
 ## Prerequisites
-Apocrypha runs on all major operating systems and requires only [Java version 23](https://docs.oracle.com/en/java/javase/23/) or later to run.
+Apocrypha runs on all major operating systems and requires only [Java version 21](https://docs.oracle.com/en/java/javase/21/) or later to run.
 To check, please run `java -version` on your terminal.
 <p align="right"><a href="#top">back to top</a></p>
 
@@ -97,7 +97,13 @@ If you think something might be a bug, but you're not sure, ask on StackOverflow
 
 ## Dependency
 Apocrypha depends on the following products on runtime.
-* No Dependency
+* [commonmark-0.24.0](https://mvnrepository.com/artifact/org.commonmark/commonmark/0.24.0)
+* [commonmark-ext-gfm-tables-0.24.0](https://mvnrepository.com/artifact/org.commonmark/commonmark-ext-gfm-tables/0.24.0)
+* [javaparser-core-3.26.3](https://mvnrepository.com/artifact/com.github.javaparser/javaparser-core/3.26.3)
+* [lycoris-1.1.0](https://mvnrepository.com/artifact/com.github.teletha/lycoris/1.1.0)
+* [psychopath-2.0.2](https://mvnrepository.com/artifact/com.github.teletha/psychopath/2.0.2)
+* [sinobu-4.5.2](https://mvnrepository.com/artifact/com.github.teletha/sinobu/4.5.2)
+* [stylist-1.12.0](https://mvnrepository.com/artifact/com.github.teletha/stylist/1.12.0)
 <p align="right"><a href="#top">back to top</a></p>
 
 
