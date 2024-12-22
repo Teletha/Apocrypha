@@ -27,6 +27,7 @@ public class Project extends bee.api.Project {
         require("com.github.javaparser", "javaparser-core");
         require("org.commonmark", "commonmark");
         require("org.commonmark", "commonmark-ext-gfm-tables");
+        require("org.eclipse.jgit", "org.eclipse.jgit");
 
         versionControlSystem("https://github.com/teletha/apocrypha");
     }
